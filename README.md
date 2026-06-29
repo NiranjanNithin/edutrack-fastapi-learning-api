@@ -44,36 +44,29 @@ After starting server:
 
 📊 Core APIs
 ✅ User
-
 POST /users → Create user
 GET /users/{id} → Get user
 
 ✅ Course
-
 GET /courses → List all courses (seeded)
 POST /courses → Create course
 
 ✅ Enrollment
-
 POST /enrollments → Enroll user
 POST /enrollments/{id}/complete-lesson → Complete lesson
 
 ✅ Dashboard
-
 GET /users/{id}/dashboard → User progress
 
 ✅ Analytics
-
 GET /analytics/leaderboard → Top 5 users
 
 
 🧠 Business Logic
 ✅ Enrollment Rules
-
 Prevent duplicate active enrollments
 
 ✅ Completion Logic
-
 Auto-complete course when lessons finished
 Update status → completed
 Add completed_at timestamp
@@ -81,16 +74,12 @@ Add completed_at timestamp
 
 🏆 Achievement System
 🎯 Fast Starter
-
 Awarded when user completes their first course
 
 🎯 Deep Diver
-
 Awarded when user completes a course with ≥ 10 lessons
 
-
 📊 Leaderboard Logic
-
 Uses optimized SQL aggregation:
 
 SQLSUM(completed_lessons_count)GROUP BY userORDER BY DESCLIMIT 5Show more lines
